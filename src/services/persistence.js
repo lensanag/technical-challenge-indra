@@ -9,7 +9,7 @@ if (process.env.IS_OFFLINE) {
 }
 const dynamoDbClient = new AWS.DynamoDB.DocumentClient(dynamoDbClientParams);
 
-const read = (key) => {
+const read = async (key) => {
   const params = {
     TableName: TABLE_NAME,
     Key: {
@@ -29,7 +29,7 @@ const read = (key) => {
   }
 };
 
-const create = (item) => {
+const create = async (item) => {
   const params = {
     TableName: TABLE_NAME,
     Item: {
@@ -37,11 +37,9 @@ const create = (item) => {
     },
   };
   try {
-    await dynamoDbClient.put(params).promise();
-    res.json({ userId, name });
+    return await dynamoDbClient.put(params).promise();
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: "Could not create user" });
+    throw error;
   }
 };
 

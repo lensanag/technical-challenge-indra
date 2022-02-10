@@ -3,6 +3,7 @@ var express = require("express");
 
 var filmsRouter = require("./routes/films");
 var peopleRouter = require("./routes/people");
+var forceUsersRouter = require("./routes/force-users");
 
 var app = express();
 
@@ -15,6 +16,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use("/peliculas", filmsRouter);
 app.use("/personas", peopleRouter);
+app.use("/usuarios-de-la-fuerza", forceUsersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (_, __, next) {
