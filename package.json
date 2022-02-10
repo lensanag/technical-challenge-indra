@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon src/bin/www"
+    "dev": "nodemon src/bin/www",
+    "test": "NODE_ENV=local-test jest --verbose"
   },
   "dependencies": {
     "ajv": "^8.10.0",
@@ -14,8 +15,11 @@
     "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.0",
+    "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "serverless-dynamodb-local": "^0.2.40",
-    "serverless-offline": "^8.4.0"
+    "serverless-offline": "^8.4.0",
+    "supertest": "^6.2.2"
   }
 }
