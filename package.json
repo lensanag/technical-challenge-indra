@@ -1,0 +1,20 @@
+{
+  "name": "technical-challenge",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon src/bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "serverless-http": "^2.7.0",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-offline": "^8.4.0"
+  }
+}
