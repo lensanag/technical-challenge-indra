@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+export USERS_TABLE=users-table-dev
+export SWAPI_BASE_URL=https://swapi.py4e.com/api/
+export IS_OFFLINE=true
